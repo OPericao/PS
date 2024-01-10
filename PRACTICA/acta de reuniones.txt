@@ -1,0 +1,275 @@
+	-> NO CORCHETES
+no verlo de forma critica -> no hacer ni puto caso
+al jefe se le da informacion(sobre ventas)
+
+-----------------------------------------------------------------------------
+09/03/2023
+Reunion 2:
+
+poner el codigo del diagrama de casos de uso (dice que no es capaz de verlo o.O)
+
+error conceptual:
+	un caso de uso puede ser iniciado por un caso de uso y solo por 1
+	necesidad de un actor abstracto
+
+(no se permiten flechitas en la asociacion)
+
+incluir los actores abstractos en la descripcion de los actores
+
+para la proxima semana:
+	+(solo esta raggeando)
+	+se añade a un carrito cuando se quiere comprar
+	+se debe poder quitar del carrito
+	+proceder al pago (aqui es cuando me piden que me autentique/registre)
+	+gestionar pedidos online
+	+el jefe no deberia asuimr el rol de dependiente
+	+el jefe va a querer informacion
+
+cancelar pedido tendra restricciones como por ejemplo que el pedido no este enviado
+
+el catalogo debera tener filtros en el grano fino
+----------------------------------------------------------------------------------------
+16/03/2023
+Reunion 3:
+🥵
+Diferenciar los casos de uso entre dependiente o usuario en grano fino
+
+Implementar funcionalidad de devolver pedido (sera diferente si lo hace un cliente o el dependiente)
+
+En grano fino hai que reflejar todos los caminos posibles (los normales y los no tan normales)
+
+Para la proxima semana:
+	+sacar al gilipollas de la reunion
+	+meter a santi
+	+el que maneje la herramienta de prototipado -> pantallas en grano grueso (solo prototipos)
+		como se veria una pagina web de cuaquier tienda
+	
+video en el campus virtual sobre como pasar de grano grueso a fino
+
+el anexo del acta de reuniones estara vacio
+
+plasmar de la reunion que hemos sacado sobre lo que quiere el cliente
+-------------------------------------------------------------------------------------------------
+23/03/2023
+Reunion 4 (empezamos con el santi):
+🔞
+Los actores tienen que llevar codigo
+
+El dependiente no deberia añadir a carrito (no hace lo mismo que el cliente online),
+	en la tienda fisica añadiria los vinos con codigo de barras
+
+Faltan diapositivas en el prototipo (checkout, ...) y links
+
+Faltan filtros:
+	-Precio
+	-Nombre
+	-Año
+	-Tipo de vino
+
+Ordenar por:
+	-Alfabeticamente
+	-Año
+	-Precio
+
+Cada vino deberia mostrar:
+	-Foto
+	-Tipo
+	-Año
+	-Denominacion de origen
+	-Precio
+	-...
+
+
+PROTOTIPO
+
+Consultar Stock:
+	-Extension a "Ver detalle de un producto"
+
+Ver detalle de producto:
+	-Extension a "añadir carrito"
+
+Añadir al carrito:
+	-Debe contener informacion sobre el vino
+
+Ver carrito:
+	-Extension a modificar cantidad
+	-Extension a finalizar compra
+
+Finalizar compra:
+	-Precondicion de que el cliente este logeado
+
+
+Hacer descripciones detalladas de las ramas de las extensiones
+(con una llega para ver como manejamos las extesiones)
+-------------------------------------------------------------------------------------------------
+30/03/2023
+Reunion 5:(carrito y descripciones detalladas)
+
+Separar registrarse y logearse
+
+Faltan atributos en el carrito (para saber que lo que quiere comprar es realmente eso):
+	-Año
+	-Reserva, crianza, ...
+	-Tinto, blanco, ...
+	-Denominacion de origen
+
+No hace falta pedir los datos otra vez para la compra, simplemente estar logeado(tener cuenta)
+
+Usar la direccion de envio que ya tiene mi cuenta o añadir una nueva si no me gustan esas(igual para targetas)
+
+Permitir pagar solo parte del carrito, a la hora de pagar seleccionar lo que quieres pagar y pagar solo eso
+
+Descripciones incorrectas:
+
+Con las descripciones todos deberiamos imaginar la misma informacion y forma de funcionamiento
+aunque podemos imaginar diferente interfaz
+
+Hai que describir la pantalla sin centrarse en temas de apariencia (no hablar de desplegables por ejemplo
+a menos que lo pida el cliente expresamente)
+
+Descripcion de ver carrito:
+
+1.El sistema muestra la siguiente informacion, una lista de los articulos que tiene el carrito:
+	-Gastos de envio
+	-...
+	-...
+
+Por cada <<extends>> que tengamos, hace falta un punto en la descripcion
+
+2.Si el usuario desea modificar las cantidades del carrito entonces ejecuta el caso de uso Modificar carrito
+(asi es como lo tenemos nosotros, ver mas abajo)
+
+3.Si el usuario desea pagar algunos articulos del carrito entonces ejecuta seleccionar carrito y despues finalizar carrito
+
+
+Modificar carrito no es un caso de uso porque no tiene pasos intermedios, la descripcion deberia ser:
+
+El usuario puede modificar la cantidad de los articulos añadidos al carrito
+
+Para la siguiente semana:
+
+	-Hacer el resto de descripciones
+	-Acabar los prototipos
+-----------------------------------------------------------------------------------------
+13/04/2023
+Reunion 6: (santi se cortó el pelo)
+🥰
+
+Tinto y reserva o gran reserva son tipos de filtrado distinto
+
+Le faltan campos en la pagina principal (los campos tipicos: precio, nombre, reserva, año, ...)
+
+Lo que se muestra cuando entro dentro del vino es la descripción
+
+Descripciones detalladas:
+	-No hai grano fino ni grano grueso en casos de uso (no es que nos falte eso, es que no lo tiene que haber)	
+	-El paso 3 y 4 deberian ir juntos-> Si el usuario desea finalizar la compra selecciona los productos que quiere
+		comprar y le da a finalizar carrito
+	-Hai 2 posibilidades, que te logees o te registres (el hecho de que la pantalla sea la misma no hace que no sean independientes)
+
+Errores logearse/registrarse:
+	-Cuando ya esté logeado no deberia poder volver a logearme
+	-Solo la persona sin registrar podria
+	-El paso 1 deberian ser 2 pasos -> 
+		1_Si el usuario no esta logeado y desea logearse ejecuta el caso de uso...
+		2_Si el usuario no esta logeado y desea registrarse ejecuta el caso de uso...
+
+Faltan casos de uso para introducir nuevas direcciones, metodos de pago...; validar los datos; ...
+
+Cuando se le da a finalizar compra deberia pedir un mensaje de confirmación (que deberia tener una excepcion)
+
+Pasos de descripcion de no me acuerdo del nombre:
+
+	1_El sistema muestra una lista con los vinos...
+
+	2_El usuario podra filtrar la lista por los siguientes campos u ordenarlos por los siguientes criterios
+
+	3_El sistema muestra la lista filtrada por bla bla y ordenada por bla bla
+
+Extraoficial -> Joven < Crianza < Reserva < Gran Reserva
+-----------------------------------------------------------
+20/04/2023
+Reunion 7:(Santi se va a cagar)
+
+Vender el producto, pero saber que producto vamos a vender
+
+✅Caso de uso Logearse esta dentro de usuario, de esta forma una persona registrada podria logearse,
+cuando si ya estas registrado no haria falta logearse (una registrada puede ver carrito y esas cosas) 
+
+el cliente logeado en "ver perfill" dará de alta direcciones y targeta
+
+✅en "ver carrito" tambien puedes dar de alta direcciones y targetas, se ejecutan los mismos casos de uso (uso de extends)
+a "ver perfil" y "carrito" 
+
+✅El filtro de precio podria ser un rango, de 20 a 30€ por ejemplo 
+
+Boton para eliminar del carrito un producto (actualmente esta como cantidad 0)
+
+✅Enlazar esos casos de uso de añadir targeta y direccion con sus respectivos casos de uso (mediante <<extends>>
+,como dije antes)
+
+Faltan detalles en la descripción del vino
+
+Caso de uso 6:
+	Falta un campo como comentario (dice que miremos moodle, a saber)
+
+	Mostrar aparte de la foto más cosas
+
+	Añadir al carrito es un paso, no un caso de uso (tal como lo tenemos nosotros) porque el sistema lo añade
+
+✅Caso de uso ver el carrito: 
+	Eliminar sería el paso 3 -> Si el usuario desea eliminar 1 o mas productos los selecciona y se dan de baja del carrito
+
+✅Caso de uso finalizar carrito:
+	No es coherente, se llama a 3 casos de uso y no habia extends a ellos (HAI QUE PONERSELOS)
+
+Faltan los detalles de las direcciones, de las targetas y el resumen
+
+El hecho de que ejecute logearse no asume que me haya logeado (podria fallar y seguir el flujo y poder finalizar)(finalizar carrito) 
+	✅Paso 1-> asegurarse de que el usuario esta registrado como ACT_codigo nombre
+
+	Paso 2-> Mostrar informacion
+
+	Paso 6-> El usuario elige una direccion y una targeta
+
+	✅Paso 7-> El sistema muestra un mensaje pidiendo la confirmacion
+
+	Paso 8-> el usuario confirma
+
+	Excepcion 1-> Si el usuario no esta registrado asi bla bla y se vuelve al paso 1
+
+	Excepcion 8-> Si el usuario no confirma se cancela
+
+Caso de uso "non me dou tempo a apuntalo"
+	Paso 2-> el cliente cubre informacion
+
+	Paso 3-> el sistema se asegura que la informacion esta bien cubierta
+
+	Excepcion 3-> si un campo obligatorio no esta cubierto o no es del tipo esperado se vuelve al paso 2
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
