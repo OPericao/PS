@@ -1,0 +1,469 @@
+Tema 1:
+
+Diferencia entre sofware que funcione y software que funcione correctamente
+
+Software:
+	Programas, procedimientos y documentacion de datos asociados, relacionados con la operacion
+	de un sistema informatico
+
+Caracteristicas del software:
+	-Elemento logico (no fisico)
+	-Se desarrola (no se fabrica)
+	-No se estropea (se deteriora)
+
+Habituarse a trabajar en un entorno que cambia continuamente
+
+Problematica:
+	-Fuera de plazo y presupuesto
+	-Excesiva dependencia
+	-Falta de control
+	-Escasa integracion
+	-Escaso control de calidad
+	-Escasa documentacion
+	-No usar metodologia formal
+
+Ingenieria de software:
+	Disciplina que comprende todos los aspectos de la produccion de software desde etapas iniciales de
+	especificacion del sistema hasta su mantenimiento despues de ser utilizado
+
+Abstraccion:
+	Permite parcelar la complejidad. Se olvidan aspectos irrelevantes y se potencian los fundamentales
+
+Encapsulamiento/Ocultacion de informacion:
+	Esconder detalles que no afecten a otros modulos, definiendo interfaces que sirvan de interaccion
+	entre los modelos
+
+Modularidad:
+	Parcelar la solucion en modulos independientes con fuerte cohesion interna
+
+Localizacion:
+	Deben estar agrupados los elementos afectados por un mismo hecho
+
+Uniformidad:
+	Todos los modulos deben usar notacion similar
+
+Completitud:
+	Deben estar desarrolados todos los aspectos del sistema
+
+Validacion y Verificabilidad:
+	-Desarrollando el pograma correcto?
+	-Desarrollando el programa correctamente?
+
+Fases de Ingenieria del Software:
+	-Definicion
+	-Desarrollo
+	-Mantenimiento
+
+Definicion:
+	-Informacion que ha de manejar el sistema
+	-Necesidades del rendimiento
+	-Restricciones del diseño
+	-Interfaces del sistema con el usuario y con otros sistemas
+	-Criterios de validacion
+	
+	Analisis de requisitos:
+		-Extraer los requisitos de un producto software
+		-Plasmar el resultado del analisis de requisitos en el documento de Especificacion de Requisitos
+		-Factor clave en el exito o fracaso de los proyectos
+
+Desarrollo:
+	-Se diseñan las estructuras de los datos y programas:
+		-Caracterizacion de interfaces
+		-Paso del diseño al lenguaje de programacion
+		-Realizacion de la prueba
+	-Se escriben y documentan programas
+	-Se prueba el software
+
+Mantenimiento
+	-Comienza cuando se empieza a utilizar el software
+	-Se centra en el cambio
+	-Software sometido a reparaciones y modificaciones
+	-Mayor % de coste de un sistema
+
+Tipos de mantenimiento:
+	-Correctivo: un programa no realiza correctamente la aplicacion para la que se ha diseñado
+	-Perfectivo: conseguir mayor adecuacion a los requisitos, mayor eficiencia o recoger nuevas funcionalidades
+	-Adaptativo: adaptar el programa para acomodarlo a su entorno
+	-Preventivo: hace cambios para que el programa se pueda corregir, adaptar y mejorar mas facilmente
+			(Reingenieria del software)
+
+Procesos:
+	-El fundamento de la IS es la capa de proceso
+	-Define un marco de trabajo:
+		+Identifica tareas y trabajos de la IS
+		+Define el flujo de trabajo entre las actividades y tareas
+		+Identifica los productos de trabajo que se producen
+		+Especifica los puntos de control de calidad requeridos
+
+Metodos:
+	-Proporciona el como y cubre las actividades de ingenieria fundamentales
+	-Se centra en las actividades tecnicas que se deben realizar para conseguir las tareas de ingenieria
+
+Herramientas:
+	-Proporciona soporte a las capas de proceso y metodos
+	-Automatizacion de algunas actividades:
+		+Actividades de gestion de procesos
+		+Metodos tecnicos usados en la ingenieria de software
+		+Soporte de sistemas general
+		+Marcos de trabajo para otras herramientas
+	-La automatizacion ayuda a eliminar trabajo, reduce posibilidad de errores y hace mas facil usar buenas
+		practicas de IS
+----------------------------------------------------------------------------------------------
+Tema 2:
+
+Ciclo de Vida:
+	-Determina el orden de las fases
+	-Establece los criterios de transicion (pasar de una fase a la siguiente)
+
+Ciclo de vida -> toda la vida del sistema
+
+Ciclo de vida de desarrollo -> desde el analisis hasta la entrega al usuario
+
+Cascada:
+	-Alternativa al Code and Fix
+	-Mas conocido, estudiado y empleado
+	-Definicion de requisitos, documentacion y analisis antes de codificar
+	-Secuencia lineal
+
+En cascada un paso se aborda completamente antes de pasar al siguiente
+
+Ventajas (Cascada):
+	-Marco de referencia para asignar las actividades
+	-Metodo estructurado con pautas claras
+	-Coordinacion
+	-Hitos de seguimiento
+	-Estimacion y seguimiento
+	-Deteccion de desviaciones
+	-Productos entregables intermedios
+
+Desventajas (Cascada):
+	-Establece todos los requisitos al inicio, cosa a veces imposible
+	-Gran rigidez
+	-Deteccion de errores tardia
+	-Nada esta acabado hasta que todo esta acabado
+
+Ciclo de vida en V:
+	-Rama descendente -> actividades de desarrollo
+	-Rama ascendente -> actividades de prueba
+	-Cada actividad de la rama descendente tiene su correspondiente prueba en la ascendente
+
+Ventajas (V):
+	-Parecida a la cascada -> hereda sus ventajas
+	-Consideracion de pruebas lo antes posible
+
+Desventajas (V):
+	-Imposibilidad de establecer todos los requisitos al inicio
+	-Gran rigidez (menos que en cascada)
+	-Los unicos productos parciales estan en forma de documentos	
+(Ventajas y desventajas iguales que cascada)
+
+Prototipado:
+	-3 fases en ciclo: Escucho al usuario -> Construyo prototipo -> Usuario prueba el prototipo
+	-Tipos:
+		+Deshechables: eliminar dudas y desarrollar interfaz
+		+Evolutivos: criterios minima calidad y documentacion, puede pasar de prototipo a sotfware
+	-Adecuado cuando no se sabe lo que se quiere conseguir
+
+Ventajas (Prototipado):
+	-Ideal cuando los requisitos no estan claros
+
+Desventajas (Prototipado):
+	-Tendencia a que el usuario crea que el trabajo ya está hecho
+	-Decisiones de implementacion que le permiten desarrollar rapidamente el prototipo
+
+Modelos Evolutivos:
+	-El software evoluciona con el tiempo -> se comprenden los requisitos iniciales pero faltan por definir los detalles
+						de extension del producto
+	-Se necesita un modelo diseñado explicitamente para acomodarse a un producto que evolucione
+	-Son iterativos (Incremental / Espiral)
+
+Incremental:
+	-Construye una implementacion parcial del sistema global para despues ir aumentando funcionalidades
+	-Es la aplicacion reiterada del modelo de Cascada -> el incremento puede ser el refinamiento de uno anterior
+							o el desarrollo de una nueva funcionalidad
+	-En el primer incremento se debe abordar el nucleo del sistema (requisitos fundamentales)
+	-En incrementos posteriores se abordan funcionalidades complementarias
+	-El usuario evalua un incremento y se elabora un plan para el incremento siguiente
+	-El software debe facilitar la incorporacion de nuevos requisitos
+
+Ventajas (Incremental):
+	-Personal no tiene que estar disponible para una implementacion completa
+	-Permite la obtencion de incrementos operativos
+	-Reduce la posibilidad de que los requisitos del usuario cambien durante el desarrollo
+	-Mayor flexibilidad ante mas funcionalidades
+	-La calidad y estabilidad mejoran con las iteraciones
+
+Desventajas (Incremental):
+	-Puede ser muy complejo definir el nucleo del sistema para el primer incremento
+	-Complicado establecer y priorizar funcionalidades
+	-Las soluciones de incrementos anteriores pueden no ser validas para incrementos posteriores
+	-No util en proyectos cortos o con funcionalidades ya definidas
+ 
+Espiral:
+	-Combina Cascada y Prototipo
+	-Varias versiones incrementales:
+		+Primeras -> modelo a papel o prototipo
+		+Ultimas -> versiones cada vez mas completas del sistema
+	-Pasos:
+		+Determinacion de objetivos, alternativas y restricciones
+		+Evaluacion de alternativas
+		+Desarrollo del siguiente nivel del producto
+		+Planificacion de la siguiente fase
+
+Ventajas (Espiral):
+	-Adaptacion a las necesidades cambiantes y al nuevo conocimiento
+	-Manejo de prototipos enlazandolos con el analisis de riesgo
+	-Gestion de los riesgos
+
+Desventajas (Espiral):
+	-Alta habilidad requerida para el analisis de riesgos
+----------------------------------------------------------------------------------------------------------------------------------------
+Tema 3:
+
+Requisito de software -> condicion o necesidad de un usuario para resolver un problema
+
+Especificacion de requisitos:
+	-Usa estandares
+	-Aclara el objetivo global a cumplir
+	-Emplea descripciones textuales y graficas
+	-Ordena y agrupa los requisitos
+	-Relaciona unos requisitos con otros requisitos y otros elementos
+
+Pasos para identificar los requisitos:
+	-Observar y entender desde el punto de vista del usuario
+	-Interpretar el trabajo del usuario y su forma de describirlo
+	-Inventar mejores formas de hacer el trabajo
+	-Plasmar los resultados en la especificacion de requisitos
+
+Problemas al definir los requisitos:
+	-No son obvios y vienen de varias fuentes
+	-Dificiles de expresar
+	-Cantidad dificil de manejar
+	-Un requisito puede cambiar
+	-Se suele olvidar lo rutinario
+	-Usuarios con distinto vocabulario a los desarrolladores
+	
+Actividades de la ingenieria de requisitos:
+	-Obtencion
+	-Analisis
+	-Especificacion
+	-Validacion
+
+Evolucion de los requisitos:
+	-No se hacen las preguntas correctas
+	-Cambia el problema a resolver
+	-Cambia la forma de pensar del usuario
+	-Cambia el mercado en el que se desenvuelve
+
+Tipos de requisitos:
+	-Negocio
+	-Usuario
+	-Software
+
+Requisitos de usuario:
+	Definidos de forma comprensible para el usuario sin conocimiento previo, especifican un comportamiento
+	externo del sistema, evitando sus caracteristicas de diseño
+
+Requisitos de software:
+	Agregan detalle y explican como el producto ha de proporcional los requisitos de usuario, pueden ser usados
+	para la implementacion del producto por lo que debe ser una especificacion completa y consistente
+
+Requisitos de sistema:
+	Funcionales:
+		+Describen lo que el sistema debe hacer
+		+Describen la interaccion entre el sistema y su entorno (sin importar implementacion)
+		+El entorno incluye al usuario y cualquier otro sistema externo que interactue
+	No funcionales:
+		No hacen referencia a las funciones del sistema sino a las propiedades del mismo (fiabilidad, tiempo
+			de respuesta, capacidad de almacenamiento...). Son cualidades que debe tener el producto
+			para ser atractivo, util, rapido, fiable o seguro
+		+Producto
+		+Organizacionales
+		+Externos
+
+Caracteristicas de la descripcion de un requisito:
+	-Completo
+	-Correcto
+	-Necesario
+	-Realizable
+	-Priorizable
+	-Verificable
+	-No ambiguo
+
+Caracteristicas de la especificacion de requisitos:
+	-Completa
+	-Consistente
+	-Modificable
+	-Trazable
+
+Tecnicas de recogidas de requisitos:
+	-Reuniones/entrevistas
+	-Cuestionarios y encuestas
+	-Brainstorming
+	-Casos de uso
+	-Prototipos
+	-Escenarios
+
+Modelo de casos de uso:
+	-Relacion entre actores y casos de uso
+	-Se centra en lo que debe hacerse y no la manera de hacerlo
+	-Sencillo y claro
+
+Actores:
+	-Entidad que realiza una interaccion con el sistema
+	-Primarios y secundarios
+
+Casos de uso:
+	-Descripcion de la secuencia de interacciones entre un actor y el sistema
+	-Grano fino o grueso
+
+Relaciones:
+	-Asociacion
+	-Extiende
+	-Generalizacion
+	-Inclusion
+
+Construccion:
+	-Identificacion de los casos de uso
+	-Descripcion de los casos de uso
+
+Proceso de analisis de requisitos con casos de uso:
+	-Identificar actores
+	-Identificar los casos de uso principales
+	-Identificar casos de uso nuevos a partir de los existentes
+	-Crear descripciones de casos de uso
+	-Definir prioridades
+	-Escribir casos de trazo fino y crear prototipos e interfaces
+------------------------------------------------------------------------------------------------------
+Tema 4:
+
+Principios de los modelos:
+	-El equipo de software no crea modelos
+	-No crear mas modelos de los necesarios
+	-Modelo mas sencillo
+	-Modelos susceptibles al cambio
+	-Cada modelo con un proposito
+	-Adaptar los modelos al sistema
+	-Modelos utiles, pero no perfectos
+	-Si se consigue comunicar contenido, da igual la representacion
+	-Preocuparse si el instinto dice que el modelo es incorrecto
+	-Retroalimentacion lo antes posible
+
+Principios de los modelos de analisis:
+	-Entenderse y representarse el dominio de informacion
+	-Entenderse y representarse las funciones del software
+	-Representarse el comportamiento del software ante acontecimientos externos
+	-Modelos con detalles por capas
+	-Analisis avanza desde lo esencial hacia el detalle
+
+Modelos derivados de los requisitos del sistema:
+	-Modelo de datos (E/R)
+	-Modelo de procesos (DFD)
+	-Diccionario de datos (DD)
+	-Especificacion de procesos (EP)
+
+Aplicacion:
+	-DFD organizado en:
+		+TOP-DOWN (mas comun)
+		+BOTTOM-UP
+		+MIDDLE-UP
+	-Nivel 0 (Diagrama de contexto):
+		+Un solo procesos burbuja
+		+Entidades y almacenes externos
+	-Nivel 1 (Diagrama de sistemas):
+		+Tantos procesos como subsistemas
+	-Niveles 2,3,...:
+		+Detallan procesos anteriores
+
+Si la explicacion de un proceso primitivo no puede hacerse en una sola pagina, necesita explosionarse.
+Un nivel DFD no deberia contener mas de 6 procesos, tampoco especifica temporalidad.
+
+Consistencia (DFD):
+	-Evitar sumideros (procesos con solo entrada)
+	-Evitar procesos de generacion instantanea (procesos con solo salida)
+	-Evitar procesos no etiquetados
+	-Evitar almacenes de solo lectura o escritura (salvo los externos)
+
+DD:
+	-DFD:
+		+Entidades externas
+		+Flujos de datos
+		+Almacenes
+	-E/R:
+		+Entidades y relaciones
+		+Atributos
+
+Para definir un dato hace falta:
+	-Significado dentro del contexto
+	-Composicion del dato
+	-Valores que puede tomar
+
+Balanceo DFD - DD:
+	-Cada flujo y almacen del DFD debe estar en el DD
+	-Cada dato y almacen del DD debe estar en el DFD
+
+Balanceo DFD - EP:
+	-Cada burbuja del DFD debe asociarse con un nivel inferior del DFD o con un EP, pero no ambos
+	-Cada EP debe tener una burbuja de nivel inferior en el DFD
+	-Entradas y salidas deben coincidir en DFD y EP
+
+Balanceo E/R - DFD, EP:
+	-Cada almacen DFD debe corresponder aPue una entidad E/R y viceversa
+	-Las EP crean y eliminan instancias de entidades y relaciones del E/R
+
+Pasos:
+	-Obtener conocimiento del entorno
+	-Obtener los modelos de analisis
+	-Obtener las EP
+--------------------------------------------------------------------------------------------------------
+Tema 5:
+
+Caracteristicas del diseño estructurado:
+	-Obtencion de la solucion -> permite obtener la solucion a partir de la definicion del problema
+	-Simplifica el problema -> subdivide el problema en cajas negras
+	-Conjunto de estrategias -> ofrece estrategias para desarrollar una solucion de diseño a partir del analisis
+	-Tecnicas graficas -> Diagrama de estructuras y tablas de interfaz
+	-Criterios para evaluar -> la calidad de la solucion respecto al problema
+
+Diagrama de estructuras (DEC):
+	-Puede observarse a simple vista la jerarquia de control y comunicacion entre modulos
+	-Visiones del modulo:
+		+Externa:
+			ºEntrada
+			ºSalida
+			ºFuncion
+		+Interna:
+			ºMecanismos
+			ºDatos internos
+	-Conexion y comunicacion:
+		+Lineas que conectan modulos
+		+Datos
+		+Flags
+
+Tabla de interfaz:
+	-Modulo llamado
+	-Parametros formales
+	-Parametros de entrada
+	-Parametros de salida
+	-Uso del parametro
+	-Significado del  parametro
+
+Complementan al diagrama de estructura
+
+Estrategias de diseño:
+	-Analisis de transformacion:
+		+Revisar el modelo del sistema
+		+Determinar caracteristicas del DFD
+		+Aislar centro de transformacion
+		+1er nivel de factorizacion
+		+2º nivel de factorizacion
+		+Refinar arquitectura del sistema
+		+Revisar el diseño	
+	-Analisis de transaccion:
+		+Revisar el modelo del sistema
+		+Determinar caracteristicas del DFD
+		+Aislar centro de transaccion
+		+1er nivel de factorizacion
+		+2º nivel de factorizacion
+		+Refinar arquitectura del sistema
+		+Revisar el diseño	
